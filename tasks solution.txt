@@ -1,0 +1,163 @@
+task 1
+var rusalt = prompt(" Enter your massage");
+for(var i=1;i<=6;i++){
+document.writeln("<h" + i +">"+rusalt+"</h" + i + ">");
+}
+
+
+##################
+task 2
+
+var sum = 0;
+
+do{
+    var num1 = Number(prompt("Enter You Number1", 0)); 
+ 
+    if (isNaN(num1) ){
+        alert("Enter only Number"); 
+    }
+    else{
+    sum = num1+sum;
+    }
+
+}while (num1!=0 && sum <100 );
+document.writeln(" The sum is "+sum)
+
+
+###################
+task 3
+
+
+
+var count =0;
+var string = prompt("Enter the string");
+for(var i=0; i<string.length ;i++){
+
+if(string[i]=="e" || string[i]=="E"){
+    count++;
+}
+}
+document.writeln( "character 'e' is found "+ count + "tiems");
+
+
+
+####################
+task 4
+
+
+
+
+var mystring=prompt("Enter the string");
+
+
+var result=confirm(" Do you want consider case sensitivity");
+
+var flag=0;
+if(result==true){
+ for(var i=0;i< mystring.length /2;i++){
+    if(mystring[i]!==mystring[mystring.length-1-i]){
+        document.writeln("is not palindrome");
+        flag++;
+        break;
+    }
+ }
+ if (flag==0){
+    document.writeln("is  palindrome");
+
+ }
+
+}
+else{
+    
+     mystring=mystring.toLowerCase();
+    for(var i=0;i< mystring.length /2;i++){
+        if(mystring[i]!==mystring[mystring.length-1-i]){
+            document.writeln("is not palindrome");
+            flag++;
+            break;
+        }
+     }
+     if (flag==0){
+        document.writeln("is  palindrome");
+    
+     }
+
+}
+
+
+
+
+
+######################
+task 5
+var lightThemeColors = theme.contrastColorPairs;
+document.writeln(lightThemeColors);
+
+do{
+    var fname = prompt("Enter your name");
+    var flag=0;
+    for(var i=0;i<fname.length;i++){
+        if(!isNaN(fname[i])){
+            alert(" enter only character");
+            flag++;
+            break;
+        }
+    }}
+    while(flag!=0);
+    
+    do{
+        var flag2=0
+        var pnumber = prompt("Enter your phone number");
+        if(isNaN(pnumber)){
+            alert("Enter only Number"); 
+            flag2++; 
+        }
+        if(pnumber.length!=8){
+            alert("Phone numder should be 8 numbers");
+            flag2++;
+        }
+    }
+    while(flag2!=0 );
+    
+    do{
+        var flag3=0;
+        const Pattern1= /^010/;
+        const Pattern2= /^011/;
+        const Pattern3= /^012/;
+        var mnumber = prompt("Enter your mobile number");
+        if(!((Pattern1.test(mnumber))||(Pattern2.test(mnumber))||(Pattern3.test(mnumber)))){
+            alert("mobile number is wrong");
+            flag3++;
+        }
+      
+        if((isNaN(mnumber))){
+            alert("mobile numder should be numbers only");
+            flag3++;
+        }
+        if(mnumber.length!=11){
+            alert("mobile numder should be 11 numbers");
+            flag3++;
+        }
+    }while(flag3!=0)
+
+
+const Pattern =  /^[a-z]{3}@(?:[0-9]{3}\.)[a-z]{2,3}$/i;
+do{
+var flag4 =0;
+var myemail= prompt("enter your email")
+if(!(Pattern.test(myemail))){
+   alert("email address is wrong");
+    flag4++;
+
+}
+
+}while(flag4!=0)
+
+var today = new Date().toLocaleDateString();
+document.writeln("<h4> Welcom dear</h4>"+fname);
+document.writeln("<h4> your phone number is </h4>"+pnumber);
+document.writeln("<h4> your mobile number is </h4>"+mnumber);
+document.writeln("<h4> your email address is </h4>"+myemail);
+document.writeln("<h4>Today is</hr> "+today);
+
+
